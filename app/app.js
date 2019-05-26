@@ -13,7 +13,10 @@ router.get('/direct', (req, res) => {
 })
 
 router.get('/bitcoin', (req, res) => {
-
+     connection.getUncompletedOrdersEthereum()
+     .then(dataset => {
+         console.log('dataset: \n', dataset);
+     })
 })
 app.listen(3001, () => console.log('Example app listening on port 3001!'));
 

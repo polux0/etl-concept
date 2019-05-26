@@ -10,7 +10,7 @@ services:
       - ./app/:/src
     environment:
       - MYSQL_DATABASE=kilotest
-      - MYSQL_HOST=rippled-database-server
+      - MYSQL_HOST=etl-proof-of-concept-database-server
       - MYSQL_PORT=3306
       - MYSQL_USER=eth_user_local
       - MYSQL_PASSWORD=eth_password_loc

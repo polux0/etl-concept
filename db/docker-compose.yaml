@@ -16,7 +16,7 @@ services:
       - rippled-network
     ports:
         - "33061:3306"
-    container_name: "rippled-database-server"
+    container_name: "etl-proof-of-concept-database-server"
 
 networks:
   rippled-network:
