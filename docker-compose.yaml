@@ -1,0 +1,27 @@
+version: '3.5'
+services:
+
+  etl-proof-of-concept-node:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    working_dir: /src
+    volumes:
+      - ./app/:/src
+    environment:
+      - MYSQL_DATABASE=kilotest
+      - MYSQL_HOST=rippled-database-server
+      - MYSQL_PORT=3306
+      - MYSQL_USER=eth_user_local
+      - MYSQL_PASSWORD=eth_password_loc
+      - INFURA_API_KEY=9ba2ced9fa6345ddb1b20992630b885d
+    ports:
+      - 3001:3001
+    container_name: "etl-proof-of-concept-node"
+
+    networks:
+      - rippled-network
+
+networks:
+  rippled-network:
+    name: rippled-network

@@ -1,0 +1,27 @@
+{
+  "name": "wallet-balance-crawler",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "^7.2.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-rate-limit": "^3.4.0",
+    "mailgun-js": "^0.20.0",
+    "memory-cache": "^0.2.0",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.6.8",
+    "nodemon": "^1.19.0",
+    "npm-git-install": "^0.3.0",
+    "request": "^2.88.0",
+    "requirejs": "^2.3.5",
+    "web3": "^0.19.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

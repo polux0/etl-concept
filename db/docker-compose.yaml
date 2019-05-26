@@ -1,0 +1,27 @@
+version: '3.5'
+services:
+
+  # The Database
+  etl-proof-of-concept-database-server:
+    image: mysql:5.6
+    volumes:
+      - etl-proof-of-concept-database-server:/var/lib/mysql
+    environment:
+      - "MYSQL_DATABASE=kilotest"
+      - "MYSQL_PORT=3306"
+      - "MYSQL_USER=eth_user_local"
+      - "MYSQL_PASSWORD=eth_password_loc"
+      - "MYSQL_ROOT_PASSWORD=Up6KjbnEV4Hgfo75YM393QdQsK3Z0aTNBz0DoirrW+c"
+    networks:
+      - rippled-network
+    ports:
+        - "33061:3306"
+    container_name: "rippled-database-server"
+
+networks:
+  rippled-network:
+    name: rippled-network
+
+volumes: 
+  etl-proof-of-concept-database-server:
+
