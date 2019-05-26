@@ -23,7 +23,7 @@ router.get('/bitcoin', (req, res) => {
              //console.log('dan po dan: \n', item[ounter]);
 
          })
-
+         res.setHeader('Access-Control-Allow-Origin:', '*')
          res.status(200).json(dataset);
      })
 })
