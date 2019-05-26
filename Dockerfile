@@ -30,7 +30,7 @@ ADD ./app/package.json /src/package.json
 
 RUN npm install -force
 
-EXPOSE 80
+#EXPOSE 80
 
 RUN npm install -g nodemon
 

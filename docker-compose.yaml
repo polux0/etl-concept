@@ -9,11 +9,11 @@ services:
     volumes:
       - ./app/:/src
     environment:
-      - MYSQL_DATABASE=kilotest
+      - MYSQL_DATABASE=newschema
       - MYSQL_HOST=etl-proof-of-concept-database-server
-      - MYSQL_PORT=3306
-      - MYSQL_USER=eth_user_local
-      - MYSQL_PASSWORD=eth_password_loc
+      - MYSQL_PORT=33061
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Up6KjbnEV4Hgfo75YM393QdQsK3Z0aTNBz0DoirrW+c
       - INFURA_API_KEY=9ba2ced9fa6345ddb1b20992630b885d
     ports:
       - 3001:3001

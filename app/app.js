@@ -4,18 +4,27 @@ const router = express.Router();
 
 app.use('/api', router);
 
-const connection = require('./queries');
-
-router.get('/direct', (req, res) => {
-
-    res.status(200).json('Everything is all right');
- 
-})
+const connection = require('./fetch');
 
 router.get('/bitcoin', (req, res) => {
-     connection.getUncompletedOrdersEthereum()
+
+     connection.fetchAllFromGlavna()
+
      .then(dataset => {
-         console.log('dataset: \n', dataset);
+
+         dataset.map((item, counter) => {
+             
+            console.log('NOVI DAN !!!! \n');
+            for (let index = 1; index < 25; index++) {
+                
+                console.log('vrednost za svaki sat: \n', item[index]);
+1               
+            }
+             //console.log('dan po dan: \n', item[ounter]);
+
+         })
+
+         res.status(200).json(dataset);
      })
 })
 app.listen(3001, () => console.log('Example app listening on port 3001!'));
